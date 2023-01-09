@@ -1,4 +1,8 @@
 <script>
+    import {Alert, Button, ImagePlaceholder, Skeleton, TextPlaceholder} from "flowbite-svelte";
+    import {Navbar, NavBrand, NavHamburger, NavLi, NavUl} from "flowbite-svelte";
+    import Navbar2 from "./Navbar2.svelte";
+
     const layers = [0,1,2,3];
     let y;
     function doAlert(){
@@ -7,7 +11,7 @@
 </script>
 
 <svelte:window bind:scrollY={y}/>
-
+<Navbar2 />
 <div class="parallax-container">
     {#each layers as layer}
         <img
@@ -20,15 +24,16 @@
 
 <div class="text">
 	<div class = "centerParallaxText">
-        <div class = "contents">
-            <h1 on:click = {doAlert()}>Rishit Patil</h1>
+        <div class = "nameDiv">
+            <h1 on:click = {doAlert()} class="text-7xl">Rishit Patil</h1>
             <p>Computer Science @ UW-Madison</p>
         </div>
 	</div>
 
     <div class="foreground">
-        <button on:click = {doAlert}>whns</button>
+        <Button outline on:click = {doAlert}>whns</Button>
     </div>
+
 </div>
 
 <style>
@@ -66,13 +71,6 @@
         will-change: transform;
     }
 
-    .parallax-container img:last-child::after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: rgb(45,10,13);
-    }
 
     .text {
         position: relative;
@@ -84,7 +82,6 @@
         justify-content: center;
         box-sizing: border-box;
     }
-
     span {
         display: block;
         font-size: 1em;
@@ -98,7 +95,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgb(32,0,1);
+        background-color: rgb(185, 62, 66);
         color: white;
         padding: 50vh 0 0 0;
     }
@@ -111,7 +108,7 @@
         align-items: center;
         justify-content: center;
     }
-    .contents{
+    .nameDiv{
         position: relative;
         z-index: 1000;
         height: auto;
@@ -122,15 +119,12 @@
         border-radius: 16px;
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(11.5px);
-        -webkit-backdrop-filter: blur(11.5px);
-        border: 1px solid rgba(0, 0, 0, 0.2);
         font-family: 'Montserrat', sans-serif;
-        transform: translateY(25%);
+        transform: translateY(50%);
     }
 
     :global(body) {
         margin: 0;
         padding: 0;
-        background-color: rgb(253, 174, 51);
     }
 </style>
