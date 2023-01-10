@@ -7,12 +7,13 @@
     import Avatar2 from "../assets/rishit.jpeg"
     const layers = [0,1,2,3];
     let y;
-    function doAlert(){
-
-    }
+    let height;
+    let visible;
+    $: y > height/2 ? (visible = true) : (visible = visible)
+    $: console.log(visible)
 </script>
 
-<svelte:window bind:scrollY={y}/>
+<svelte:window bind:scrollY={y} bind:innerHeight={height}/>
 <Navbar2 />
 <div class="parallax-container">
     {#each layers as layer}
@@ -27,7 +28,7 @@
 <div class="text">
 	<div class = "centerParallaxText">
         <div class = "nameDiv">
-            <h1 on:click = {doAlert()} class="text-7xl">Rishit Patil</h1>
+            <h1 class="text-7xl">Rishit Patil</h1>
             <p>Computer Science @ UW-Madison</p>
             <div class = "keepInline">
                 <a class = "glassmorphism"  href = "https://www.linkedin.com/in/rishit-patil/" target = "_blank">
@@ -45,7 +46,7 @@
 	</div>
 
     <div class="foreground">
-        <About />
+        <About visible = {visible}/>
     </div>
 
 </div>
@@ -74,15 +75,6 @@
         width: 275vh;
         left: 50%;
         transform: translate(-50%,0%);
-    }
-    @media only screen and (max-device-width: 1366px) {
-        .parallax-container {
-            position: fixed;
-            z-index: -1;
-            width: 350vh;
-            height: 250px;
-            left: 50%;
-            transform: translate(-50%,0%);        }
     }
     @media only screen and (max-device-height: 800px) {
         .parallax-container {
@@ -119,7 +111,7 @@
         top: 900px;
         left: 0;
         width: 100%;
-        height: auto;
+        height: 35%;
         background-color: rgb(3, 14, 45);
         color: white;
         padding: 10vh 0 10vh 0;
@@ -152,5 +144,26 @@
     :global(body) {
         margin: 0;
         padding: 0;
+    }
+    @media only screen and (max-device-width: 1366px) {
+        .parallax-container {
+            position: fixed;
+            z-index: -1;
+            width: 350vh;
+            height: 250px;
+            left: 50%;
+            transform: translate(-50%,0%);
+        }
+        .foreground {
+            position: absolute;
+            top: 900px;
+            left: 0;
+            width: 100%;
+            height: auto;
+            background-color: rgb(3, 14, 45);
+            color: white;
+            padding: 10vh 0 10vh 0;
+
+        }
     }
 </style>

@@ -1,9 +1,15 @@
 <script>
     import Avatar2 from "../assets/rishit.jpeg"
+    import { fade, fly } from 'svelte/transition';
+    import {onMount} from "svelte";
+    import {sineInOut} from "svelte/easing";
+    export let visible = false;
 </script>
-<div class = "centerAvatar">
-    <img src={Avatar2} class = "avatar"/>
-    <div class = "description">
+<div class = "centerAvatar" >
+    {#if visible}
+    <img src={Avatar2} in:fade = "{{duration: 2000}}" class = "avatar"/>
+
+    <div class = "description" in:fly = "{{y: 200, duration: 2000, easing: sineInOut}}">
 
 
         <h1><h1 class="rishitText">Hi, I'm Rishit.</h1>I am a computer science student at the <span class = "colorRed">University of Wisconsin-Madison</span>. I have
@@ -11,12 +17,13 @@
             have experience with languages like <span class = "colorPurple">Java and Python</span>. I'm currently working with
             <span class = "colorRed">Wisconsin Autonomous</span> to develop a six-sign classifier
             for our submission to the SAE Autodrive Challenge II. My objective is to build my understanding in technologies like <span class = "colorPurple">C++ and Azure</span>.
+
         </h1>
 
         <h1></h1>
     </div>
+    {/if}
 </div>
-
 <style>
     .colorRed{
         color: #c41e3a;
@@ -34,7 +41,7 @@
         text-align: center;
         display: flex;
         align-items: center;
-        padding: 5px;
+        padding: 0 5% 0 5%;
     }
     .avatar{
         height: 35%;
