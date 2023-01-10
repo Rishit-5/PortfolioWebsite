@@ -26,10 +26,10 @@
 </div>
 
 <div class="text">
-	<div class = "centerParallaxText">
+	<div class = "centerParallaxText"  id = "home">
         <div class = "nameDiv">
-            <h1 class="text-7xl">Rishit Patil</h1>
-            <p>Computer Science @ UW-Madison</p>
+            <h1 class="text-7xl font-bold">Rishit Patil</h1>
+            <p>Aspiring Computer Scientist</p>
             <div class = "keepInline">
                 <a class = "glassmorphism"  href = "https://www.linkedin.com/in/rishit-patil/" target = "_blank">
                     <Linkedin class = "inline-block h-50" color = "#FFFFFF"/>
@@ -45,13 +45,16 @@
         </div>
 	</div>
 
-    <div class="foreground">
-        <About visible = {visible}/>
+    <div id = "about" class="foreground">
+        <About  visible = {visible}/>
     </div>
 
 </div>
 
 <style>
+    html {
+        scroll-behavior: smooth;
+    }
     .glassmorphism{
         -webkit-appearance: button;
         -moz-appearance: button;
