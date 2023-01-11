@@ -7,7 +7,7 @@
 </script>
 <div class = "centerAvatar" >
     {#if visible}
-    <img src={Avatar2} in:fade = "{{duration: 2000}}" class = "avatar"/>
+    <img src={Avatar2} in:fade = "{{duration: 2000}}" class = "avatar" alt="Rishit Patil"/>
 
     <div class = "description" in:fly = "{{y: 200, duration: 2000, easing: sineInOut}}">
 
@@ -47,19 +47,13 @@
         height: 35%;
         width: 35%;
         border-radius: 50%;
-        outline: aliceblue;
         margin: 5%;
         object-fit: cover;
         background-color: #fff;
 
         box-shadow: 0px 0px 20px 20px #fff;
     }
-    .centerAvatar{
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    @media only screen and (max-device-height: 800px) {
+    @media only screen and (max-device-width: 800px) {
         .avatar{
             height: 75%;
             width: 75%;
@@ -71,5 +65,10 @@
 
             box-shadow: 0px 0px 20px 20px #fff;
         }
+    }
+    .centerAvatar{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
     }
 </style>

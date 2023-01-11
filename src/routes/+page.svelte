@@ -4,12 +4,13 @@
     import Navbar2 from "./Navbar2.svelte";
     import About from "./About.svelte"
     import { Github, Gmail, Linkedin } from 'svelte-simples'
+    import Experience from "./Experience.svelte"
     import Avatar2 from "../assets/rishit.jpeg"
     const layers = [0,1,2,3];
     let y;
     let height;
     let visible;
-    $: y > height/2 ? (visible = true) : (visible = visible)
+    $: y > height/3 ? (visible = true) : (visible = visible)
     $: console.log(visible)
 </script>
 
@@ -46,14 +47,39 @@
 	</div>
 
     <div id = "about" class="foreground">
-        <About  visible = {visible}/>
+        <div class = "aboutSection">
+            <About  visible = {visible}/>
+        </div>
+        <div id = "experience" class = "experienceSection">
+            <br />
+            <br />
+            <div class = "experienceText">Experience</div>
+            <div class = "experienceDescription">A quick summary of some opportunities I've been a part of</div>
+            <Experience />
+        </div>
     </div>
+
 
 </div>
 
 <style>
     html {
         scroll-behavior: smooth;
+    }
+    .experienceText{
+        font-size: 2em;
+        font-weight: bold;
+    }
+    .experienceDescription{
+        color: rgb(138, 138, 138);
+    }
+    .aboutSection{
+        height: auto;
+        padding-bottom: 5%;
+    }
+    .experienceSection{
+        height: auto;
+        padding-bottom: 5%;
     }
     .glassmorphism{
         -webkit-appearance: button;
@@ -86,7 +112,6 @@
             height: 100%;
             left: 50%;
             transform: translate(-50%,0%);
-
         }
     }
     .parallax-container img {
@@ -110,8 +135,22 @@
         box-sizing: border-box;
     }
     .foreground {
+        height: 100%
+    }
+    .foreground {
         position: absolute;
         top: 900px;
+        left: 0;
+        width: 100%;
+        height: auto;
+        background-color: rgb(3, 14, 45);
+        color: white;
+        padding: 10vh 0 10vh 0;
+
+    }
+    .foreground2 {
+        position: absolute;
+        top: calc(900px + 35%);
         left: 0;
         width: 100%;
         height: 35%;
