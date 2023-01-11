@@ -50,13 +50,21 @@
         margin: 5%;
         object-fit: cover;
         background-color: #fff;
+        /* filter: url(filters.svg#grayscale); Firefox 3.5+ */
+        -webkit-filter: grayscale(1); /* Webkit Nightlies & Chrome Canary */
+        -webkit-transition: all .8s ease-in-out;
 
         box-shadow: 0px 0px 20px 20px #fff;
     }
+    .avatar:hover{
+        filter: none;
+        -webkit-filter: grayscale(0);
+        -webkit-transform: scale(1.01);
+    }
     @media only screen and (max-device-width: 800px) {
         .avatar{
-            height: 75%;
-            width: 75%;
+            height: 65%;
+            width: 65%;
             border-radius: 50%;
             outline: aliceblue;
             margin: 5%;

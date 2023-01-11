@@ -1,11 +1,9 @@
 <script>
-    import {Alert, Button, ImagePlaceholder, Skeleton, TextPlaceholder} from "flowbite-svelte";
-    import {Navbar, NavBrand, NavHamburger, NavLi, NavUl, Avatar} from "flowbite-svelte";
     import Navbar2 from "./Navbar2.svelte";
     import About from "./About.svelte"
     import { Github, Gmail, Linkedin } from 'svelte-simples'
     import Experience from "./Experience.svelte"
-    import Avatar2 from "../assets/rishit.jpeg"
+    import { Img } from 'flowbite-svelte';
     const layers = [0,1,2,3];
     let y;
     let height;
@@ -42,7 +40,6 @@
                     <Gmail class = "inline-block h-50" color = "#FFFFFF"/>
                 </a>
             </div>
-
         </div>
 	</div>
 
@@ -51,8 +48,6 @@
             <About  visible = {visible}/>
         </div>
         <div id = "experience" class = "experienceSection">
-            <br />
-            <br />
             <div class = "experienceText">Experience</div>
             <div class = "experienceDescription">A quick summary of some opportunities I've been a part of</div>
             <Experience />

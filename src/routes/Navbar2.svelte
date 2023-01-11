@@ -1,11 +1,7 @@
 <script>
     import { Navbar, NavBrand, NavLi, NavUl, NavHamburger } from 'flowbite-svelte'
     import Logo from "../assets/logo.png"
-    import { onMount } from 'svelte';
-    let my_element;
-    onMount(() => {
-        // my_element = document.getElementById("about");
-    });
+
     function onLinkClick(element){
         element.scrollIntoView({
             behavior: "smooth",

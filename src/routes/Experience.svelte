@@ -11,15 +11,16 @@
     <Tabs {activeItem} {items} on:tabChange={tabChange} />
     {#if activeItem === 'Teen Cafe'}
         <p>poll list goes here</p>
-    {:else if activeItem === 'Add New Poll'}
-        <p>new poll form goes here</p>
+    {:else if activeItem === 'Wisconsin Autonomous'}
+        <div class = "bg-red-900">
+            <p>new poll form goes here</p>
+        </div>
     {/if}
 </main>
 
 <style>
     main{
-        width: 100%;
-        max-width: 960px;
+        width: 90%;
         margin: 40px auto;
     }
 </style>
