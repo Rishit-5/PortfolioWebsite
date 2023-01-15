@@ -51,7 +51,7 @@
             <br />
             <br />
             <div class = "experienceText">Experience</div>
-            <div class = "experienceDescription">A quick summary of some opportunities I've been a part of</div>
+            <div class = "experienceDescription">A quick summary of some opportunities I've been fortunate to be a part of</div>
             <Experience />
         </div>
     </div>
