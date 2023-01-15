@@ -50,7 +50,7 @@
         <div id = "experience" class = "experienceSection">
             <br />
             <br />
-            <div class = "experienceText">Experiences</div>
+            <div class = "experienceText">Experience</div>
             <div class = "experienceDescription">A quick summary of some opportunities I've been fortunate to be a part of</div>
             <Experience />
         </div>
