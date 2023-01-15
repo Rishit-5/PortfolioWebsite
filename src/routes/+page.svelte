@@ -28,7 +28,7 @@
 	<div class = "centerParallaxText"  id = "home">
         <div class = "nameDiv">
             <h1 class="text-7xl font-bold">Rishit Patil</h1>
-            <p>Aspiring Computer Scientist</p>
+            <p class = "text-gray-400">Computer Scientist With a Girlfriend(Impossible)</p>
             <div class = "keepInline">
                 <a class = "glassmorphism"  href = "https://www.linkedin.com/in/rishit-patil/" target = "_blank">
                     <Linkedin class = "inline-block h-50" color = "#FFFFFF"/>
@@ -48,13 +48,13 @@
             <About  visible = {visible}/>
         </div>
         <div id = "experience" class = "experienceSection">
+            <br />
+            <br />
             <div class = "experienceText">Experience</div>
             <div class = "experienceDescription">A quick summary of some opportunities I've been a part of</div>
             <Experience />
         </div>
     </div>
-
-
 </div>
 
 <style>
@@ -100,7 +100,7 @@
         left: 50%;
         transform: translate(-50%,0%);
     }
-    @media only screen and (max-device-height: 800px) {
+    @media only screen and (max-device-width: 800px) {
         .parallax-container {
             position: fixed;
             z-index: -1;
