@@ -3,7 +3,7 @@
     import About from "./About.svelte"
     import { Github, Gmail, Linkedin } from 'svelte-simples'
     import Experience from "./Experience.svelte"
-    import { Img } from 'flowbite-svelte';
+    import Projects from "./Projects.svelte"
     const layers = [0,1,2,3];
     let y;
     let height;
@@ -28,7 +28,7 @@
 	<div class = "centerParallaxText"  id = "home">
         <div class = "nameDiv">
             <h1 class="text-7xl font-bold">Rishit Patil</h1>
-            <p class = "text-gray-400">Computer Scientist With a Girlfriend(Impossible)</p>
+            <p class = "text-gray-400">Student | Software Engineer | Researcher</p>
             <div class = "keepInline">
                 <a class = "glassmorphism"  href = "https://www.linkedin.com/in/rishit-patil/" target = "_blank">
                     <Linkedin class = "inline-block h-50" color = "#FFFFFF"/>
@@ -54,6 +54,7 @@
             <div class = "experienceDescription">A quick summary of some opportunities I've been fortunate to be a part of</div>
             <Experience />
         </div>
+        <Projects/>
     </div>
 </div>
 

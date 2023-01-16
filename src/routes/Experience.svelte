@@ -2,7 +2,6 @@
     import Tabs from './Tabs.svelte';
     import {onMount} from "svelte";
     import supabase from "$lib/db.js";
-    // tabs
     let experiences = [];
     let items = [];
     let activeItem = 'Teen Cafe';
@@ -12,7 +11,6 @@
         items = [];
         experiences.forEach(generateList);
         activeItem = items[0];
-        console.log(items)
     })
     function generateList(item){
         items.push(item.company);
@@ -42,6 +40,7 @@
             </div>
         {/if}
     {/each}
+
 </main>
 
 <style>
