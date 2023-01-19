@@ -68,7 +68,7 @@
     .wrapper {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        margin-bottom: 10vh;
+        margin-bottom: 20vh;
         transform: translateX(-10vw);
         height: 50vh;
     }
@@ -119,7 +119,7 @@
     .wrapperLeft {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        margin-bottom: 10vh;
+        margin-bottom: 20vh;
         height: 50vh;
 
     }
