@@ -11,20 +11,139 @@
 </script>
 {#each projects as project, index}
     {#if index % 2 === 0}
-    <div class = "projectsDiv">
-        <p class = "projectText">{project.name}</p>
-        <div class="div1">{project.description}</div>
-        <img class="div2" src = {project.picture_url}/>
-    </div>
-        {:else}
-        <div class = "projectsDivLeft">
-            <p class = "projectTextLeft">{project.name}</p>
-            <div class="div1Left">{project.description}</div>
-            <img class="div2Left" src = {project.picture_url}/>
+    <!--<div class = "projectsDiv">-->
+    <!--    <p class = "projectText">{project.name}</p>-->
+    <!--    <div class="div1">{project.description}</div>-->
+    <!--    <img class="div2" src = {project.picture_url}/>-->
+        <div class="wrapper">
+            <img class="two" src = {project.picture_url}/>
+            <div class="one">
+                <div class="goBottom">{project.name}</div>
+            </div>
+            <div class="three"><p class="projDesc">{project.description}</p></div>
+            <div class="five"></div>
         </div>
+    <!--</div>-->
+        {:else}
+            <div class="wrapperLeft">
+                <img class="twoLeft" src = {project.picture_url}/>
+                <div class="oneLeft">
+                    <div class="goBottomLeft">{project.name}</div>
+                </div>
+                <div class="threeLeft"><p class="projDescLeft">{project.description}</p></div>
+                <div class="fiveLeft"></div>
+            </div>
+    <!--    <div class = "projectsDivLeft">-->
+    <!--        <p class = "projectTextLeft">{project.name}</p>-->
+    <!--        <div class="div1Left">{project.description}</div>-->
+    <!--        <img class="div2Left" src = {project.picture_url}/>-->
+    <!--    </div>-->
     {/if}
 {/each}
 <style>
+    html{
+        overflow: hidden;
+    }
+    .projDesc {
+        background: rgb(0, 0, 0, .44);
+        backdrop-filter: blur(11.5px);
+        font-size: .75em;
+        padding: 1%;
+    }
+    .goBottom{
+        position: absolute;
+        bottom: 0;
+        font-size: 1.5em;
+        font-weight: bold;
+        margin-bottom: 1%;
+        background: -webkit-linear-gradient(#7889EF, #A99DF9);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-bottom: 10vh;
+        transform: translateX(-10vw);
+
+    }
+    .one {
+        grid-column: 1 / 3;
+        grid-row: 2/3;
+        transform: translateX(20vw);
+        position: relative;
+    }
+    .two {
+        grid-column: 3 / 4;
+        grid-row: 1 / 5;
+        aspect-ratio: 2/2;
+        object-fit: cover;
+        filter: saturate(200%) brightness(50%);
+        width: 30vw;
+        height: 30vw;
+    }
+    .two:hover {
+        filter: brightness(100%) saturate(200%);
+    }
+    .three {
+        text-align: left;
+        grid-column: 1 / 3;
+        grid-row: 3 / 6;
+        transform: translateX(20vw);
+    }
+    .projDescLeft {
+        background: rgb(0, 0, 0, .44);
+        backdrop-filter: blur(11.5px);
+        font-size: .75em;
+        padding: 1%;
+    }
+
+    .goBottomLeft{
+        position: absolute;
+        bottom: 0;
+        font-size: 1.5em;
+        font-weight: bold;
+        margin-bottom: 1%;
+        background: -webkit-linear-gradient(#7889EF, #A99DF9);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        right: 0;
+
+    }
+    .wrapperLeft {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-bottom: 10vh;
+    }
+    .oneLeft {
+        grid-column: 1 / 3;
+        grid-row: 2/3;
+        position: relative;
+        transform: translateX(20vw);
+
+    }
+    .twoLeft {
+        grid-column: 1 / 4;
+        grid-row: 1 / 5;
+        aspect-ratio: 2/2;
+        object-fit: cover;
+        filter: saturate(200%) brightness(50%);
+        width: 30vw;
+        height: 30vw;
+        transform: translateX(10vw);
+
+    }
+    .twoLeft:hover {
+        filter: brightness(100%) saturate(200%);
+    }
+    .threeLeft {
+        text-align: left;
+        grid-column: 1 / 3;
+        grid-row: 3 / 4;
+        transform: translateX(20vw);
+
+    }
+
     .projectText{
         font-size: 1.5em;
         font-weight: bold;
@@ -45,7 +164,7 @@
         background: rgb(0, 0, 0, .44);
         backdrop-filter: blur(11.5px);
         left: 15vw;
-        font-size: .75em;
+        font-size: .7em;
         padding: 1%;
     }
     .div2{
@@ -58,6 +177,8 @@
         margin-right: 13vw;
         object-fit: cover;
         filter: saturate(200%);
+        width: 30vw;
+        height: 30vw;
     }
     .projectTextLeft {
         font-size: 1.5em;
@@ -80,7 +201,7 @@
         background: rgb(0, 0, 0, .44);
         backdrop-filter: blur(11.5px);
         right: 15vw;
-        font-size: .75em;
+        font-size: .7em;
         padding: 1%;
     }
     .div2Left {
