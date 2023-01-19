@@ -54,7 +54,13 @@
             <div class = "experienceDescription">A quick summary of some opportunities I've been fortunate to be a part of</div>
             <Experience />
         </div>
-        <Projects/>
+        <div id = "projects">
+            <br />
+            <br />
+            <div class = "experienceText">Projects</div>
+            <div class = "experienceDescription2">Here are some of my favorite projects</div>
+            <Projects/>
+        </div>
     </div>
 </div>
 
@@ -68,6 +74,10 @@
     }
     .experienceDescription{
         color: rgb(138, 138, 138);
+    }
+    .experienceDescription2{
+        color: rgb(138, 138, 138);
+        margin-bottom: 10vh;
     }
     .aboutSection{
         height: auto;

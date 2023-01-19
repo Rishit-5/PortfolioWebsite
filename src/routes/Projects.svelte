@@ -15,6 +15,7 @@
     <!--    <p class = "projectText">{project.name}</p>-->
     <!--    <div class="div1">{project.description}</div>-->
     <!--    <img class="div2" src = {project.picture_url}/>-->
+        <div class = "wrappedBox">
         <div class="wrapper">
             <img class="two" src = {project.picture_url}/>
             <div class="one">
@@ -23,8 +24,10 @@
             <div class="three"><p class="projDesc">{project.description}</p></div>
             <div class="five"></div>
         </div>
+        </div>
     <!--</div>-->
         {:else}
+        <div class = "wrappedBox">
             <div class="wrapperLeft">
                 <img class="twoLeft" src = {project.picture_url}/>
                 <div class="oneLeft">
@@ -33,6 +36,8 @@
                 <div class="threeLeft"><p class="projDescLeft">{project.description}</p></div>
                 <div class="fiveLeft"></div>
             </div>
+        </div>
+
     <!--    <div class = "projectsDivLeft">-->
     <!--        <p class = "projectTextLeft">{project.name}</p>-->
     <!--        <div class="div1Left">{project.description}</div>-->
@@ -48,7 +53,7 @@
         background: rgb(0, 0, 0, .44);
         backdrop-filter: blur(11.5px);
         font-size: .75em;
-        padding: 1%;
+        padding: 5%;
     }
     .goBottom{
         position: absolute;
@@ -65,7 +70,7 @@
         grid-template-columns: repeat(3, 1fr);
         margin-bottom: 10vh;
         transform: translateX(-10vw);
-
+        height: 50vh;
     }
     .one {
         grid-column: 1 / 3;
@@ -91,13 +96,14 @@
         grid-row: 3 / 6;
         transform: translateX(20vw);
     }
+
     .projDescLeft {
         background: rgb(0, 0, 0, .44);
         backdrop-filter: blur(11.5px);
         font-size: .75em;
-        padding: 1%;
+        padding: 5%;
+        text-align: right;
     }
-
     .goBottomLeft{
         position: absolute;
         bottom: 0;
@@ -114,6 +120,8 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         margin-bottom: 10vh;
+        height: 50vh;
+
     }
     .oneLeft {
         grid-column: 1 / 3;
@@ -143,7 +151,53 @@
         transform: translateX(20vw);
 
     }
+    @media only screen and (max-device-width: 50rem) {
+        .wrappedBox{
+            display: flex;
+            justify-content: center;
+        }
+        .two {
+            object-fit: cover;
+            filter: saturate(200%) brightness(50%);
+            width: 100%;
+            height: 100%;
+        }
+        .wrapper {
+            display: flex;
+            transform: translateX(0);
+            justify-content: center;
+            align-items: center;
+            aspect-ratio: 1/1;
+            margin-bottom: 10vh;
+        }
+        .projDesc{
+            display: none;
+        }
+        .goBottom{
+            display: none;
+        }
 
+        .twoLeft {
+            object-fit: cover;
+            filter: saturate(200%) brightness(50%);
+            width: 100%;
+            height: 100%;
+            transform: translateX(0);
+        }
+        .wrapperLeft {
+            display: flex;
+            transform: translateX(0);
+            justify-content: center;
+            align-items: center;
+            aspect-ratio: 1/1;
+        }
+        .projDescLeft {
+            display: none;
+        }
+        .goBottomLeft {
+            display: none;
+        }
+    }
     .projectText{
         font-size: 1.5em;
         font-weight: bold;

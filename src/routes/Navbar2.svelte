@@ -21,7 +21,7 @@
         <NavLi nonActiveClass='text-white text-2xl cursor-grab' on:click = {() => onLinkClick(document.getElementById("home"))}>Home</NavLi>
         <NavLi nonActiveClass='text-white text-2xl cursor-grab' on:click = {() => onLinkClick(document.getElementById("about"))}>About</NavLi>
         <NavLi nonActiveClass='text-white text-2xl cursor-grab' on:click = {() => onLinkClick(document.getElementById("experience"))}>Experience</NavLi>
-
+        <NavLi nonActiveClass='text-white text-2xl cursor-grab' on:click = {() => onLinkClick(document.getElementById("projects"))}>Projects</NavLi>
     </NavUl>
 </Navbar>
 
