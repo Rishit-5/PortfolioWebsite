@@ -83,7 +83,7 @@
         grid-row: 1 / 5;
         aspect-ratio: 2/2;
         object-fit: cover;
-        filter: saturate(200%) brightness(50%);
+        filter: saturate(200%);
         width: 30vw;
         height: 30vw;
     }
@@ -135,7 +135,7 @@
         grid-row: 1 / 5;
         aspect-ratio: 2/2;
         object-fit: cover;
-        filter: saturate(200%) brightness(50%);
+        filter: saturate(200%);
         width: 30vw;
         height: 30vw;
         transform: translateX(10vw);
@@ -190,6 +190,7 @@
             justify-content: center;
             align-items: center;
             aspect-ratio: 1/1;
+            margin-bottom: 10vh;
         }
         .projDescLeft {
             display: none;
