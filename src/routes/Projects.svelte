@@ -1,6 +1,7 @@
 <script>
     import {onMount} from "svelte";
     import supabase from "$lib/db.js";
+    import { Github } from 'svelte-simples'
     let projects = [];
     let items = [];
     let activeItem = 'Teen Cafe';
@@ -29,7 +30,14 @@
                 <div class="goBottom">{project.name}</div>
             </div>
             <div class="three"><p class="projDesc">{project.description}</p>
-            <p class = "toolsText">{project.tools}</p></div>
+            <p class = "toolsText">{project.tools}</p>
+                <a class = "gitButton" href = {project.url} target = "_blank">
+                    <div class = "inline-block h-50 absolute my-3">
+                        <Github class = "glassmorphism" color = "#FFFFFF"/>
+                    </div>
+                </a>
+            </div>
+
             <div class="five"></div>
         </div>
         </div>
@@ -49,9 +57,18 @@
                 <div class="oneLeft">
                     <div class="goBottomLeft">{project.name}</div>
                 </div>
-                <div class="threeLeft"><p class="projDescLeft">{project.description}</p>
-                    <p class = "toolsTextLeft">{project.tools}</p></div>
-                <div class="fiveLeft"></div>
+                <div class="threeLeft">
+                    <p class="projDescLeft">{project.description}</p>
+                    <p class = "toolsTextLeft">{project.tools}</p>
+                    <a class = "gitButton" href = {project.url} target = "_blank">
+                    <div class = "inline-block h-50 absolute my-3 right-0">
+                        <Github class = "glassmorphism" color = "#FFFFFF"/>
+                    </div>
+                    </a>
+                </div>
+
+                <div class="fiveLeft">
+                </div>
             </div>
         </div>
 
@@ -63,6 +80,9 @@
     {/if}
 {/each}
 <style>
+    .glassmorphism {
+
+    }
     .centered {
         position: absolute;
         top: 50%;
@@ -213,6 +233,9 @@
 
     }
     @media only screen and (max-device-width: 50rem) {
+        .gitButton {
+            display: none;
+        }
         .toolsText {
             display: none;
         }
