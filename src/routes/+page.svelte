@@ -15,14 +15,30 @@
 <svelte:window bind:scrollY={y} bind:innerHeight={height}/>
 <Navbar2 />
 <div class="parallax-container">
-    {#each layers as layer}
-        <img
-                style="transform: translate(0, {-y * layer / (layers.length - 1)}px)"
+    <img
+                style="transform: translate(0, {-y * 0 / (layers.length - 1)}px)"
                 class = "coolBackground"
-                src="src/assets/back{layer}.png"
-                alt="parallax layer {layer}"
+                src="src/assets/back0.png"
+                alt="parallax layer 0"
         />
-    {/each}
+        <img
+                style="transform: translate(0, {-y * 1 / (layers.length - 1)}px)"
+                class = "coolBackground"
+                src="src/assets/back1.png"
+                alt="parallax layer 1"
+        />
+        <img
+                style="transform: translate(0, {-y * 2 / (layers.length - 1)}px)"
+                class = "coolBackground"
+                src="src/assets/back2.png"
+                alt="parallax layer 2"
+        />
+        <img
+                style="transform: translate(0, {-y * 3 / (layers.length - 1)}px)"
+                class = "coolBackground"
+                src="src/assets/back3.png"
+                alt="parallax layer 3"
+        />
 </div>
 
 <div class="text">
