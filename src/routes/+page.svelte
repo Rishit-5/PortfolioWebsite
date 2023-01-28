@@ -68,6 +68,9 @@
     html {
         scroll-behavior: smooth;
     }
+    .coolBackground {
+        /*transform: translate(0, {-y * layer / (layers.length - 1)}px)*/
+    }
     .experienceText{
         font-size: 2em;
         font-weight: bold;
