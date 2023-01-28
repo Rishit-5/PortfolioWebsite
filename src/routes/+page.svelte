@@ -17,8 +17,10 @@
 <div class="parallax-container">
     {#each layers as layer}
         <img
+                style="transform: translate(0, {-y * layer / (layers.length - 1)}px)"
+                class = "coolBackground"
                 src="src/assets/back{layer}.png"
-                alt="parallax layer back{layer}"
+                alt="parallax layer {layer}"
         />
     {/each}
 </div>
