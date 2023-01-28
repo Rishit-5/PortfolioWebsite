@@ -5,6 +5,10 @@
     import Experience from "./Experience.svelte"
     import Projects from "./Projects.svelte"
     const layers = [0,1,2,3];
+    import back0 from "../assets/back0.png"
+    import back1 from "../assets/back1.png"
+    import back2 from "../assets/back2.png"
+    import back3 from "../assets/back3.png"
     let y;
     let height;
     let visible;
@@ -18,25 +22,25 @@
     <img
                 style="transform: translate(0, {-y * 0 / (layers.length - 1)}px)"
                 class = "coolBackground"
-                src="src/assets/back0.png"
+                src="{back0}"
                 alt="parallax layer 0"
         />
         <img
                 style="transform: translate(0, {-y * 1 / (layers.length - 1)}px)"
                 class = "coolBackground"
-                src="src/assets/back1.png"
+                src="{back1}"
                 alt="parallax layer 1"
         />
         <img
                 style="transform: translate(0, {-y * 2 / (layers.length - 1)}px)"
                 class = "coolBackground"
-                src="src/assets/back2.png"
+                src="{back2}"
                 alt="parallax layer 2"
         />
         <img
                 style="transform: translate(0, {-y * 3 / (layers.length - 1)}px)"
                 class = "coolBackground"
-                src="src/assets/back3.png"
+                src="{back3}"
                 alt="parallax layer 3"
         />
 </div>
