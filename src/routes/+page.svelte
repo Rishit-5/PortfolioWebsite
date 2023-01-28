@@ -17,7 +17,7 @@
 <div class="parallax-container">
     {#each layers as layer}
         <img
-                src="src/assets/back{layer}.png"
+                src="src/assets/back0.png"
                 alt="parallax layer back{layer}"
         />
     {/each}
