@@ -17,9 +17,8 @@
 <div class="parallax-container">
     {#each layers as layer}
         <img
-                style="transform: translate(0, {-y * layer / (layers.length - 1)}px)"
-                src="src/assets/{layer}.png"
-                alt="parallax layer {layer}"
+                src="src/assets/back{layer}.png"
+                alt="parallax layer back{layer}"
         />
     {/each}
 </div>
