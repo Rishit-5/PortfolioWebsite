@@ -16,7 +16,7 @@
             developed full-stack applications with <span class = "colorPurple">React, Node, and Svelte</span>. I also
             have experience with languages like <span class = "colorPurple">Java and Python</span>. I'm currently working with
             <span class = "colorRed">Wisconsin Autonomous</span> to develop a six-sign classifier
-            for our submission to the SAE Autodrive Challenge II. My objective is to build my understanding in technologies like <span class = "colorPurple">C++ and Azure</span>.
+            for our submission to the SAE Autodrive Challenge II. My current objective is to build my understanding in technologies like <span class = "colorPurple">C++ and Azure</span>.
 
         </h1>
 
