@@ -1,5 +1,5 @@
 <script>
-    import Avatar2 from "../assets/rishit.jpeg"
+    import Avatar2 from "../images/rishit.jpeg"
     import { fade, fly } from 'svelte/transition';
     import {onMount} from "svelte";
     import {sineInOut} from "svelte/easing";

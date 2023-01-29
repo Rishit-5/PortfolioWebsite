@@ -1,6 +1,6 @@
 <script>
     import { Navbar, NavBrand, NavLi, NavUl, NavHamburger } from 'flowbite-svelte'
-    import Logo from "../assets/logo.png"
+    import Logo from "../images/logo.png"
 
     function onLinkClick(element){
         element.scrollIntoView({

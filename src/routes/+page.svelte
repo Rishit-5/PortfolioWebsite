@@ -5,10 +5,10 @@
     import Experience from "./Experience.svelte"
     import Projects from "./Projects.svelte"
     const layers = [0,1,2,3];
-    import back0 from "../assets/back0.png"
-    import back1 from "../assets/back1.png"
-    import back2 from "../assets/back2.png"
-    import back3 from "../assets/back3.png"
+    import back0 from "../images/back0.png"
+    import back1 from "../images/back1.png"
+    import back2 from "../images/back2.png"
+    import back3 from "../images/back3.png"
     let y;
     let height;
     let visible;
