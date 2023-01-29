@@ -118,7 +118,6 @@
         text-decoration: none;
         color: initial;
         /* From https://css.glass */
-        background: rgba(255, 255, 255, 0.25);
         border-radius: 100%;
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         height: 50px;
