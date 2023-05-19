@@ -13,10 +13,10 @@
 
 
         <h1><h1 class="rishitText">Hi, I'm Rishit.</h1>I am a computer science student at the <span class = "colorRed">University of Wisconsin-Madison</span>. I have
-            developed full-stack applications with <span class = "colorPurple">React, Node, and Svelte</span>. I also
-            have experience with languages like <span class = "colorPurple">Java and Python</span>. I'm currently working with
-            <span class = "colorRed">Wisconsin Autonomous</span> to develop a six-sign classifier
-            for our submission to the SAE Autodrive Challenge II. My current objective is to build my understanding in technologies like <span class = "colorPurple">C++ and Azure</span>.
+            developed full-stack applications with tools like <span class = "colorPurple">React, Node, and Svelte</span>. I also
+            have experience with languages like <span class = "colorPurple">Java, Python, and JavaScript</span>. I am currently working with
+            <span class = "colorRed">Wisconsin Autonomous</span> on the perception team
+            for our submission to the SAE Autodrive Challenge II.
 
         </h1>
 

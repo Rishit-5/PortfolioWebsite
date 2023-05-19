@@ -88,6 +88,7 @@
 <style>
     html {
         scroll-behavior: smooth;
+        background-color: #c41e3a;
     }
     .coolBackground {
         /*transform: translate(0, {-y * layer / (layers.length - 1)}px)*/
@@ -133,6 +134,7 @@
         width: 275vh;
         left: 50%;
         transform: translate(-50%,0%);
+        background-color: #c41e3a;
     }
     @media only screen and (max-device-width: 800px) {
         .parallax-container {
@@ -168,7 +170,7 @@
     }
     .foreground {
         position: absolute;
-        top: 900px;
+        top: 800px;
         left: 0;
         width: 100%;
         height: auto;
