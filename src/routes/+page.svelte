@@ -170,7 +170,7 @@
     }
     .foreground {
         position: absolute;
-        top: 800px;
+        top: 100vh;
         left: 0;
         width: 100%;
         height: auto;
