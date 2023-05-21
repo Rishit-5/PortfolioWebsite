@@ -6,7 +6,7 @@
     let items = [];
     let activeItem = 'Teen Cafe';
     onMount(async() => {
-        let { data, error } = await supabase.from('experience').select('*')
+        let { data, error } = await supabase.from('experience').select('*').order('priority', { ascending: true })
         experiences = data;
         items = [];
         experiences.forEach(generateList);
@@ -21,7 +21,7 @@
 </script>
 
 <main>
-    <Tabs {activeItem} {items} on:tabChange={tabChange} />
+    <Tabs {activeItem} {items} on:tabChange={tabChange} class = "tabs"/>
     {#each experiences as experience}
         {#if activeItem === experience.company}
             <div class = "glassmorphism">
@@ -44,6 +44,9 @@
 </main>
 
 <style>
+    .tabs {
+        width: 20%;
+    }
     .glassmorphism{
         text-decoration: none;
         /* From https://css.glass */
