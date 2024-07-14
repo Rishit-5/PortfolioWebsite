@@ -1,4 +1,4 @@
-import supabase from "$lib/db.js";
+import supabase from "../src/lib/db.js";
 
 module.exports = (req, res) => {
     let { data, error } = supabase.from('experience').select('*').order('priority', { ascending: true })
