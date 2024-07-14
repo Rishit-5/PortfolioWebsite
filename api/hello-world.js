@@ -1,4 +1,3 @@
-import supabase from "../src/lib/db.js";
 import { createClient } from '@supabase/supabase-js'
 
 module.exports = (req, res) => {
