@@ -14,9 +14,8 @@
 
         <h1><h1 class="rishitText">Hi, I'm Rishit.</h1>I am a student at the <span class = "colorRed">University of Wisconsin-Madison</span>
             double majoring in <span class="colorPurple">Computer Science</span> and <span class="colorPurple">Data Science</span>. I have developed full-stack applications with tools like <span class = "colorPurple">React, Node, and Svelte</span>. I also
-            have experience with languages like <span class = "colorPurple">Java, Python, and JavaScript</span>. I am currently working with
-            <span class = "colorRed"><a href = "https://wa.wisc.edu/" target = "_blank">Wisconsin Autonomous</a></span> on the perception team
-            for our submission to the SAE Autodrive Challenge II.
+            have experience with languages like <span class = "colorPurple">Java, Python, and JavaScript</span>. I am passionate about <span class = "colorPurple">Machine Learning</span> and <span class = "colorPurple">Data Science</span> and have worked on projects in these fields.
+            Feel free to scroll down below to see some of my projects experiences and learn more about me!
 
         </h1>
 

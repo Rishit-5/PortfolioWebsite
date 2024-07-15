@@ -36,7 +36,7 @@
                     <li>{experience.point2}</li>
                     <li>{experience.point3}</li>
                     <li>{experience.point4}</li>
-                </ul>w
+                </ul>
             </div>
         {/if}
     {/each}
