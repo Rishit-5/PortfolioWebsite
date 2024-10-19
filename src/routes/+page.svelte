@@ -12,37 +12,49 @@
     let y;
     let height;
     let visible;
+    let isMobile = false;
+
     $: y > height/3 ? (visible = true) : (visible = visible)
     $: console.log(visible)
+
+    if (typeof window !== 'undefined') {
+        // Check if the screen width is less than or equal to 800px
+        $: isMobile = window.innerWidth <= 800;
+
+        // Update isMobile on window resize
+        window.addEventListener('resize', () => {
+            isMobile = window.innerWidth <= 800;
+        });
+    }
 </script>
 
 <svelte:window bind:scrollY={y} bind:innerHeight={height}/>
 <Navbar2 />
 <div class="parallax-container">
     <img
-                style="transform: translate(0, {-y * 0 / (layers.length - 1)}px)"
-                class = "coolBackground"
-                src="{back0}"
-                alt="parallax layer 0"
-        />
-        <img
-                style="transform: translate(0, {-y * 1 / (layers.length - 1)}px)"
-                class = "coolBackground"
-                src="{back1}"
-                alt="parallax layer 1"
-        />
-        <img
-                style="transform: translate(0, {-y * 2 / (layers.length - 1)}px)"
-                class = "coolBackground"
-                src="{back2}"
-                alt="parallax layer 2"
-        />
-        <img
-                style="transform: translate(0, {-y * 3 / (layers.length - 1)}px)"
-                class = "coolBackground"
-                src="{back3}"
-                alt="parallax layer 3"
-        />
+            style="transform: {isMobile ? 'none' : `translate(0, ${-y * 0 / (layers.length - 1)}px)`}"
+            class="coolBackground"
+            src={back0}
+            alt="parallax layer 0"
+    />
+    <img
+            style="transform: {isMobile ? 'none' : `translate(0, ${-y * 1 / (layers.length - 1)}px)`}"
+            class="coolBackground"
+            src={back1}
+            alt="parallax layer 1"
+    />
+    <img
+            style="transform: {isMobile ? 'none' : `translate(0, ${-y * 2 / (layers.length - 1)}px)`}"
+            class="coolBackground"
+            src={back2}
+            alt="parallax layer 2"
+    />
+    <img
+            style="transform: {isMobile ? 'none' : `translate(0, ${-y * 3 / (layers.length - 1)}px)`}"
+            class="coolBackground"
+            src={back3}
+            alt="parallax layer 3"
+    />
 </div>
 
 <div class="text">
