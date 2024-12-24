@@ -9,6 +9,9 @@
     import back1 from "../images/back1.png"
     import back2 from "../images/back2.png"
     import back3 from "../images/back3.png"
+    import {fade, fly} from "svelte/transition";
+    import {sineInOut} from "svelte/easing";
+    
     let y;
     let height;
     let visible;
@@ -61,7 +64,7 @@
 	<div class = "centerParallaxText"  id = "home">
         <div class = "nameDiv">
             <h1 class="text-7xl font-bold">Rishit Patil</h1>
-            <p class = "text-gray-400">Student | Software Engineer | Researcher</p>
+            <p class = "text-gray-400">Badger | Software Engineer | Researcher</p>
             <div class = "keepInline">
                 <a class = "glassmorphism"  href = "https://www.linkedin.com/in/rishit-patil/" target = "_blank">
                     <Linkedin class = "inline-block h-50" color = "#FFFFFF"/>
@@ -72,6 +75,9 @@
                 <a class = "glassmorphism" href = "mailto: rpatil5@wisc.edu" target = "_blank">
                     <Gmail class = "inline-block h-50" color = "#FFFFFF"/>
                 </a>
+            </div>
+            <div class="resume-button-container">
+                <a href="/resume" class="resume-button" target = "_blank">Resume</a>
             </div>
         </div>
 	</div>
@@ -98,6 +104,41 @@
 </div>
 
 <style>
+    .resume-button-container {
+        margin-top: 10px; /* Adjust spacing as needed */
+    }
+
+    .resume-button {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 1rem;
+        color: #fff;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border-radius: 5px;
+        text-decoration: none;
+        text-align: center;
+        cursor: pointer;
+        transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .resume-button:hover {
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    .glassmorphism {
+        -webkit-appearance: button;
+        -moz-appearance: button;
+        text-decoration: none;
+        color: initial;
+        border-radius: 100%;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        height: 50px;
+        width: 50px;
+        margin: 5% 0 0 0;
+    }
     html {
         scroll-behavior: smooth;
         background-color: rgb(3, 14, 45);
